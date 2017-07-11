@@ -5,6 +5,9 @@ import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 
+import { NgRedux, NgReduxModule } from '@angular-redux/store';
+
+import { IAppState, rootReducer } from './store';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -13,10 +16,17 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
+    NgReduxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(ngRedux: NgRedux<IAppState>) {
+    ngRedux.configureStore(rootReducer, {});
+  }
+}
