@@ -6,8 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 
 import { NgRedux, NgReduxModule } from '@angular-redux/store';
-
 import { IAppState, rootReducer } from './store';
+
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -27,6 +27,6 @@ import { AppComponent } from './app.component';
 })
 export class AppModule {
   constructor(ngRedux: NgRedux<IAppState>) {
-    ngRedux.configureStore(rootReducer, {});
+    ngRedux.configureStore(rootReducer, {});    // Initialize store
   }
 }
