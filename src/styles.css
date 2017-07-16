@@ -12,5 +12,5 @@ body {
 
 /* Material Design Global Styles */
 md-toolbar-row {
-  justify-content: space-between;
+  justify-content: center;
 }
