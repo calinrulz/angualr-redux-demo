@@ -8,6 +8,11 @@ md-card {
   text-align: center;
 }
 
+.mat-icon {
+  vertical-align: middle;
+  line-height: 0.8;
+}
+
 .counter-title {
   display: inline-block;
   width: 100%;
