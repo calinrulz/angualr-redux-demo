@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, isDevMode } from '@angular/core';
 
-import { MaterialModule } from '@angular/material';
+import { MatIconModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 
@@ -17,7 +17,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
 
-    MaterialModule,
+    MatIconModule,
     BrowserAnimationsModule,
 
     NgReduxModule
